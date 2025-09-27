@@ -5,8 +5,10 @@ import Bedroom from "../assets/Bedroom.jpg"
 import Livingroom from "../assets/living_room.jpg"
 import Dining from "../assets/dining.jpg"
 import { data } from "../HomeData.tsx/Data"
+import { useState } from "react"
 
 const Home = () => {
+
   return (
     <div>
       {/* banner */}
@@ -70,9 +72,10 @@ const Home = () => {
                 </div>
               ))}
             </div>
-            <div className={styles.show_more}>
-              <button>Show More</button>
-            </div>
+            
+              <div className={styles.show_more}>
+                <button>show more</button>
+              </div>
         </div>
       </div>
       {/* products end */}
@@ -83,13 +86,3 @@ const Home = () => {
 }
 
 export default Home
-
-// <div>
-//        <div className={styles.outercontainer}>
-//         <img src={frontbanner} alt="frontbanner" className={styles.frontbanner} />
-//         <div>
-//         <img src={rectangle} alt="rectangle" className={styles.overlayimage} />
-//         <div className={styles.overlayText}>discover the new furniture</div>
-//         </div>
-//       </div>
-// </div>
