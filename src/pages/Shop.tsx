@@ -1,6 +1,6 @@
 import styles from "./Shop.module.css"
 import FilterMenu from "../assets/FilterMenu.png"
-import Squaregrid from "../assets/Squaregrid.png"
+import SquareGrid from "../assets/SquareGrid.png"
 import AutoLayout from "../assets/AutoLayout.png"
 import Line from "../assets/Line.png"
 import Trophy from "../assets/trophy.png"
