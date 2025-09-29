@@ -3,9 +3,16 @@ import FilterMenu from "../assets/FilterMenu.png"
 import Squaregrid from "../assets/Squaregrid.png"
 import AutoLayout from "../assets/AutoLayout.png"
 import Line from "../assets/Line.png"
+import Trophy from "../assets/trophy.png"
+import guarantee from "../assets/guarantee.png"
+import shipping from "../assets/shipping.png"
+import support from "../assets/support.png"
+import { shopData } from "../Data.tsx/ShopData"
+
 const Shop = () => {
   return (
     <div>
+			{/* FrontBanner */}
       <div className={styles.outer_frontBanner}>
         <div className={styles.inner_frontBanner}>
           <div className={styles.shopText}>Shop</div>
@@ -18,6 +25,9 @@ const Shop = () => {
           </div>
         </div>
       </div>
+			{/* FrontBanner End */}
+
+			{/* FilterMenu */}
       <div className={styles.outer_filterMenu}>
         <div className={styles.inner_filterMenu}>
           <div className={styles.filtermenu}>
@@ -51,8 +61,65 @@ const Shop = () => {
           </div>
         </div>
       </div>
-      <div>Preview cards</div>
-      <div>Information bar</div>
+			{/* FilterMenu End */}
+				
+			{/* Preview Cards */}
+      <div className={styles.outer_previewCards}>
+				<div className={styles.outer_products_card}>
+								{shopData.map((item, index) => (
+									<div key={index} className={styles.inner_products_card}>
+										<img src={item.thumbnail} alt={item.title} className={styles.products_image} />
+										<div className={styles.products_bg}>
+											<div className={styles.products_metadata}>
+												<div className={styles.products_title}>{item.title}</div>
+												<div className={styles.products_suffix}>{item.suffix}</div>
+												<div className={styles.products_price}>{item.price}</div>
+											</div>
+										</div>
+									</div>
+								))}
+				</div>
+				<div className={styles.pagination}>
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+					<button className={styles.next}>Next</button>
+				</div>
+			</div>
+			{/* Preview Cards End */}
+
+			{/* Information bar */}
+      <div className={styles.outer_informationBar}>
+				<div className={styles.inner_informationBar}>
+					<img src={Trophy} alt="trophy" />
+					<div>
+						<div className={styles.inner_informationBar_p1}>High Quality</div>
+						<div className={styles.inner_informationBar_p2}>crafted from top materials</div>
+					</div>
+				</div>
+				<div className={styles.inner_informationBar}>
+					<img src={guarantee} alt="guarantee" />
+					<div>
+						<div className={styles.inner_informationBar_p1}>Warranty Protection</div>
+						<div className={styles.inner_informationBar_p2}>Over 2 years</div>
+					</div>
+				</div>
+				<div className={styles.inner_informationBar}>
+					<img src={shipping} alt="shipping" />
+					<div>
+						<div className={styles.inner_informationBar_p1}>Free Shipping</div>
+						<div className={styles.inner_informationBar_p2}>Order over 150 $</div>
+					</div>
+				</div>
+				<div className={styles.inner_informationBar}>
+					<img src={support} alt="support" />
+					<div>
+						<div className={styles.inner_informationBar_p1}>24 / 7 Support</div>
+						<div className={styles.inner_informationBar_p2}>Dedicated support</div>
+					</div>
+				</div>
+			</div>
+			{/* Information bar End */}
     </div>
   )
 }

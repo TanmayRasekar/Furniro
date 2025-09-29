@@ -4,8 +4,7 @@ import styles from "./Home.module.css"
 import Bedroom from "../assets/Bedroom.jpg"
 import Livingroom from "../assets/living_room.jpg"
 import Dining from "../assets/dining.jpg"
-import { data } from "../HomeData.tsx/Data"
-import { useState } from "react"
+import { data } from "../Data.tsx/HomeData"
 
 const Home = () => {
 
@@ -30,7 +29,7 @@ const Home = () => {
 
       {/* Catogories */}
       <div className={styles.outer_catogorie_container}>
-       <div className={styles.inner_catogorie_container}>
+      <div className={styles.inner_catogorie_container}>
         <div className={styles.textcontainer}>
           <div className={styles.text1}>Browse The Range</div>
           <div className={styles.text2}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
@@ -51,7 +50,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-       </div>
+      </div>
       </div>
       {/* Catogories end */}
       {/* products */}
@@ -79,6 +78,7 @@ const Home = () => {
         </div>
       </div>
       {/* products end */}
+      <div className={styles.line}></div>
       <div>showcase1</div>
       <div>showcase2</div>
     </div>

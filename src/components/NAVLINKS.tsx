@@ -15,7 +15,6 @@ export const NAVLINKS = [
     label: "Contact",
     href: "/contact_us",
   },
- 
 ];
 
 export const Help =[
