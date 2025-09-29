@@ -36,7 +36,7 @@ const Shop = () => {
               <div>Filter</div>
             </div>
             <div className={styles.viewicon}>
-              <img src={Squaregrid} alt="square grid" />
+              <img src={SquareGrid} alt="square grid" />
               <img src={AutoLayout} alt="auto layout" />
             </div>
             <div className={styles.lineicon}>
