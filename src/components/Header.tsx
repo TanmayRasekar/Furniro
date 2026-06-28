@@ -18,7 +18,7 @@ const Header = () => {
         <div>
           <div className={styles.navlinks}>
             {NAVLINKS.map((link, index) => (
-              <a key={index} href={link.href} className={styles.navLink}>
+              <a key={index} href={link.href} >
                 {link.label}
               </a>
             ))}
